@@ -3,8 +3,8 @@ module LazyHighCharts
     SERIES_OPTIONS = %w(lines points bars shadowSize colors)
 
     attr_accessor :data, :options, :placeholder, :html_options
-    alias  :canvas :placeholder
-    alias  :canvas= :placeholder=
+    alias_method :canvas, :placeholder
+    alias_method :canvas=, :placeholder=
 
 
       def initialize(canvas = nil, html_opts = {})
